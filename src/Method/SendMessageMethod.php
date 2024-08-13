@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Method;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\ReplyParametersTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 use TgBotApi\BotApiBase\Type\MessageEntityType;
 
@@ -19,13 +20,14 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
+    use ReplyParametersTrait;
 
     /**
      * Text of the message to be sent.
      *
      * @var string
      */
-    public $text;
+    public string $text;
 
     /**
      * Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width
@@ -33,14 +35,14 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
      *
      * @var string|null
      */
-    public $parseMode;
+    public ?string $parseMode;
 
     /**
      * Optional. List of special entities that appear in message text, which can be specified instead of parse_mode.
      *
      * @var MessageEntityType[]|null
      */
-    public $entities;
+    public ?array $entities;
 
     /**
      * Optional. Disables link previews for links in this message.
