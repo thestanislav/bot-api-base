@@ -44,7 +44,8 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
     public ?array $entities;
 
 
-    public ?ReplyParametersType $replyParameters = null;
+    /** @var ReplyParametersType | null  */
+    public $replyParameters = null;
 
     /**
      * Optional. Disables link previews for links in this message.

@@ -6,18 +6,20 @@ use TgBotApi\BotApiBase\Type\MessageEntityType;
 
 trait ReplyParametersTrait
 {
-    public int $messageId;
+    public int $message_id;
 
-    public int|string|null $chatId = null;
+    public int|string|null $chat_id = null;
 
-    public ?bool $allowSendingWithoutReply = null;
+    public ?bool $allow_sending_without_reply = null;
     public ?string $quote = null;
 
-    public ?string $quoteParseMode = null;
+    public ?string $quote_parse_mode = null;
 
 
     /**
      * @var MessageEntityType[]|null
      */
-    public ?array $quoteEntities = null;
+    public ?array $quote_entities = null;
+
+    public ?int $quote_position = null;
 }
