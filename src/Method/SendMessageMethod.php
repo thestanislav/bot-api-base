@@ -7,9 +7,9 @@ namespace TgBotApi\BotApiBase\Method;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
-use TgBotApi\BotApiBase\Method\Traits\ReplyParametersTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 use TgBotApi\BotApiBase\Type\MessageEntityType;
+use TgBotApi\BotApiBase\Type\ReplyParametersType;
 
 /**
  * Class SendMessageMethod.
@@ -20,7 +20,6 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
-    use ReplyParametersTrait;
 
     /**
      * Text of the message to be sent.
@@ -43,6 +42,9 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
      * @var MessageEntityType[]|null
      */
     public ?array $entities;
+
+
+    public ?ReplyParametersType $replyParameters = null;
 
     /**
      * Optional. Disables link previews for links in this message.
