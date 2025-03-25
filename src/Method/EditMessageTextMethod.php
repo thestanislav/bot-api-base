@@ -9,6 +9,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\MessageEntityType;
+use TgBotApi\BotApiBase\Type\LinkPreviewOptionsType;
 
 /**
  * Class EditMessageTextMethod.
@@ -41,6 +42,13 @@ class EditMessageTextMethod implements HasParseModeVariableInterface, EditMethod
      * @var MessageEntityType[]|null
      */
     public $entities;
+
+    /**
+     * Optional. Link preview customization options.
+     *
+     * @var LinkPreviewOptionsType|null
+     */
+    public ?LinkPreviewOptionsType $linkPreviewOptions = null;
 
     /**
      * Optional. Disables link previews for links in this message.

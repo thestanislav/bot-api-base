@@ -34,6 +34,13 @@ class SendPhotoMethod implements HasParseModeVariableInterface, SendMethodAliasI
     public $photo;
 
     /**
+     * Optional. Pass True if the photo needs to be covered with a spoiler animation.
+     *
+     * @var bool|null
+     */
+    public ?bool $hasSpoiler = null;
+
+    /**
      * @param int|string           $chatId
      * @param InputFileType|string $photo
      *

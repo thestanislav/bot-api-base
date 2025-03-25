@@ -9,6 +9,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\ForwardMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 
 /**
  * Class ForwardMessageMethod.
@@ -19,6 +20,8 @@ class ForwardMessageMethod implements SendMethodAliasInterface, ForwardMethodAli
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;
+    use SendToChatVariablesTrait;
+
     /**
      * Unique identifier for the chat where the original message was sent
      * (or channel username in the format @channelusername).
@@ -40,6 +43,13 @@ class ForwardMessageMethod implements SendMethodAliasInterface, ForwardMethodAli
      * @var int
      */
     public $messageId;
+
+    /**
+     * Optional. Timestamp in seconds to start playing the video from, in case the forwarded message is a video.
+     *
+     * @var int|null
+     */
+    public ?int $videoStartTimestamp = null;
 
     /**
      * @param int|string $chatId

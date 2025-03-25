@@ -10,6 +10,7 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 use TgBotApi\BotApiBase\Type\MessageEntityType;
 use TgBotApi\BotApiBase\Type\ReplyParametersType;
+use TgBotApi\BotApiBase\Type\LinkPreviewOptionsType;
 
 /**
  * Class SendMessageMethod.
@@ -43,16 +44,33 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
      */
     public ?array $entities;
 
+    /**
+     * Optional. Additional interface options.
+     *
+     * @var ReplyParametersType|null
+     */
+    public ?ReplyParametersType $replyParameters = null;
 
-    /** @var ReplyParametersType | null  */
-    public $replyParameters = null;
+    /**
+     * Optional. Link preview customization options.
+     *
+     * @var LinkPreviewOptionsType|null
+     */
+    public ?LinkPreviewOptionsType $linkPreviewOptions = null;
 
     /**
      * Optional. Disables link previews for links in this message.
      *
      * @var bool|null
      */
-    public $disableWebPagePreview;
+    public ?bool $disableWebPagePreview = null;
+
+    /**
+     * Optional. Unique identifier of the message effect to be added to the message.
+     *
+     * @var string|null
+     */
+    public ?string $messageEffectId = null;
 
     /**
      * @param int|string $chatId

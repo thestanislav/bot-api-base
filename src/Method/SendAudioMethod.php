@@ -53,14 +53,21 @@ class SendAudioMethod implements SendMethodAliasInterface
 
     /**
      * Optional. Thumbnail of the file sent. The thumbnail should be in JPEG format and less than 200 kB in size.
-     * A thumbnail‘s width and height should not exceed 90.
+     * A thumbnail's width and height should not exceed 90.
      * Ignored if the file is not uploaded using multipart/form-data.
-     * Thumbnails can’t be reused and can be only uploaded as a new file, so you can pass “attach://<file_attach_name>”
+     * Thumbnails can't be reused and can be only uploaded as a new file, so you can pass "attach://<file_attach_name>"
      * if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More info on Sending Files.
      *
      * @var InputFileType|string|null
      */
     public $thumb;
+
+    /**
+     * Optional. Unique identifier of the message effect to be added to the message.
+     *
+     * @var string|null
+     */
+    public ?string $messageEffectId = null;
 
     /**
      * @param int|string           $chatId
