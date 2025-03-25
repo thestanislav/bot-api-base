@@ -15,6 +15,6 @@ class GetMeMethod implements MethodInterface
 {
     public static function create(): GetMeMethod
     {
-        return new static();
+        return new self();
     }
 }

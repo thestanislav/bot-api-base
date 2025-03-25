@@ -29,7 +29,7 @@ class SetMyCommandsMethod implements SetMethodAliasInterface
      */
     public static function create(array $commands): SetMyCommandsMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->commands = $commands;
 
         return $instance;

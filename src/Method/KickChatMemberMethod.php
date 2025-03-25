@@ -19,6 +19,7 @@ class KickChatMemberMethod implements KickMethodAliasInterface
     use FillFromArrayTrait;
     use ChatIdVariableTrait;
     use UserIdVariableTrait;
+
     /**
      * Optional. Date when the user will be unbanned, \DateTimeInterface.
      * If user is banned for more than 366 days or less than 30 seconds
@@ -41,7 +42,7 @@ class KickChatMemberMethod implements KickMethodAliasInterface
      */
     public static function create($chatId, int $userId, array $data = null): KickChatMemberMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->userId = $userId;
         if ($data) {

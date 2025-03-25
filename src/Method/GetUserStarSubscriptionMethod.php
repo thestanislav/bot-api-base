@@ -25,7 +25,8 @@ class GetUserStarSubscriptionMethod
     public int $userId;
 
     /**
-     * Optional. Unique identifier of the business connection on behalf of which the subscription information will be retrieved.
+     * Optional. Unique identifier of the business connection on behalf of which
+     * the subscription information will be retrieved.
      *
      * @var string|null
      */
@@ -41,7 +42,7 @@ class GetUserStarSubscriptionMethod
      */
     public static function create(int $userId, array $data = null): GetUserStarSubscriptionMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         if ($data) {
             $instance->fill($data);
@@ -49,4 +50,4 @@ class GetUserStarSubscriptionMethod
 
         return $instance;
     }
-} 
+}

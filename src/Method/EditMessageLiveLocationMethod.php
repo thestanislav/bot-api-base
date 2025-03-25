@@ -68,7 +68,7 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
         float $longitude,
         array $data = null
     ): EditMessageLiveLocationMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
         $instance->latitude = $latitude;
@@ -89,7 +89,7 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
         float $longitude,
         array $data = null
     ): EditMessageLiveLocationMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->latitude = $latitude;
         $instance->longitude = $longitude;
         $instance->inlineMessageId = $inlineMessageId;

@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
-use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaAudioType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaDocumentType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
@@ -17,9 +18,9 @@ use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
  *
  * @see https://core.telegram.org/bots/api#sendmediagroup
  */
-class SendMediaGroupMethod implements MethodInterface
+class SendMediaGroupMethod implements MethodInterface, SendMethodAliasInterface
 {
-    use ChatIdVariableTrait;
+    use SendToChatVariablesTrait;
     use FillFromArrayTrait;
 
     /**
@@ -28,13 +29,6 @@ class SendMediaGroupMethod implements MethodInterface
      * @var InputMediaPhotoType[]|InputMediaVideoType[]|InputMediaAudioType[]|InputMediaDocumentType[]
      */
     public $media;
-
-    /**
-     * Optional. Sends the message silently. Users will receive a notification with no sound.
-     *
-     * @var bool|null
-     */
-    public $disableNotification;
 
     /**
      * Optional. If the message is a reply, ID of the original message.
@@ -58,7 +52,7 @@ class SendMediaGroupMethod implements MethodInterface
      */
     public static function create($chatId, array $media, array $data = null): SendMediaGroupMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->media = $media;
         if ($data) {

@@ -48,7 +48,7 @@ class SendDiceMethod implements SendMethodAliasInterface
      */
     public static function create($chatId, array $data = null): SendDiceMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         if ($data) {

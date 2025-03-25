@@ -51,7 +51,7 @@ class AnswerPreCheckoutQueryMethod implements AnswerMethodAliasInterface
      */
     public static function createSuccess(string $preCheckoutQueryId): AnswerPreCheckoutQueryMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->preCheckoutQueryId = $preCheckoutQueryId;
         $instance->ok = true;
 
@@ -66,7 +66,7 @@ class AnswerPreCheckoutQueryMethod implements AnswerMethodAliasInterface
      */
     public static function createFail(string $preCheckoutQueryId, string $errorMessage): AnswerPreCheckoutQueryMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->preCheckoutQueryId = $preCheckoutQueryId;
         $instance->ok = false;
         $instance->errorMessage = $errorMessage;

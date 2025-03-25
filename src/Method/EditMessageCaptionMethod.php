@@ -30,7 +30,7 @@ class EditMessageCaptionMethod implements HasParseModeVariableInterface, EditMet
      */
     public static function create($chatId, int $messageId, array $data = null): EditMessageCaptionMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
         if ($data) {
@@ -45,7 +45,7 @@ class EditMessageCaptionMethod implements HasParseModeVariableInterface, EditMet
      */
     public static function createInline(string $inlineMessageId, array $data = null): EditMessageCaptionMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->inlineMessageId = $inlineMessageId;
         if ($data) {
             $instance->fill($data, ['chatId', 'messageId', 'inlineMessageId']);

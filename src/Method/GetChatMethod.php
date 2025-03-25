@@ -23,7 +23,7 @@ class GetChatMethod implements MethodInterface
      */
     public static function create($chatId): GetChatMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         return $instance;

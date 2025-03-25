@@ -114,13 +114,6 @@ class SendVideoMethod implements HasParseModeVariableInterface, SendMethodAliasI
     public ?bool $showCaptionAboveMedia = null;
 
     /**
-     * Optional. Sends the message silently. Users will receive a notification with no sound.
-     *
-     * @var bool|null
-     */
-    public ?bool $disableNotification = null;
-
-    /**
      * Optional. Protects the contents of the sent message from forwarding and saving.
      *
      * @var bool|null
@@ -128,7 +121,8 @@ class SendVideoMethod implements HasParseModeVariableInterface, SendMethodAliasI
     public ?bool $protectContent = null;
 
     /**
-     * Optional. Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message.
+     * Optional. Pass True to allow up to 1000 messages per second, ignoring broadcasting limits
+     * for a fee of 0.1 Telegram Stars per message.
      *
      * @var bool|null
      */
@@ -159,7 +153,7 @@ class SendVideoMethod implements HasParseModeVariableInterface, SendMethodAliasI
      */
     public static function create($chatId, $video, array $data = null): SendVideoMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->video = $video;
         if ($data) {

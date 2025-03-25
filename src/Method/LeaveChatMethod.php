@@ -23,7 +23,7 @@ class LeaveChatMethod implements LeaveMethodAliasInterface
      */
     public static function create($chatId): LeaveChatMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         return $instance;

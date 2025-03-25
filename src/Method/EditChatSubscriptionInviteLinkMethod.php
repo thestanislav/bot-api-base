@@ -9,7 +9,8 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 /**
  * Class EditChatSubscriptionInviteLinkMethod.
  *
- * Use this method to edit the name of an existing subscription invite link. Returns the edited invite link as a ChatInviteLink object.
+ * Use this method to edit the name of an existing subscription invite link.
+ * Returns the edited invite link as a ChatInviteLink object.
  *
  * @see https://core.telegram.org/bots/api#editchatsubscriptioninvitelink
  */
@@ -56,7 +57,7 @@ class EditChatSubscriptionInviteLinkMethod
      */
     public static function create($chatId, string $inviteLink, array $data = null): EditChatSubscriptionInviteLinkMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->inviteLink = $inviteLink;
         if ($data) {
@@ -65,4 +66,4 @@ class EditChatSubscriptionInviteLinkMethod
 
         return $instance;
     }
-} 
+}

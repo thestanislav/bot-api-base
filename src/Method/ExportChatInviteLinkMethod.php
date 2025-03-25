@@ -23,7 +23,7 @@ class ExportChatInviteLinkMethod implements MethodInterface
      */
     public static function create($chatId): ExportChatInviteLinkMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         return $instance;

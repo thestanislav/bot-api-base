@@ -48,7 +48,7 @@ class SetChatMenuButtonMethod implements SetMethodAliasInterface
      */
     public static function create(array $data = null): SetChatMenuButtonMethod
     {
-        $instance = new static();
+        $instance = new self();
         if ($data) {
             $instance->fill($data);
         }

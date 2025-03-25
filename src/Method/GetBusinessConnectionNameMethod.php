@@ -34,7 +34,7 @@ class GetBusinessConnectionNameMethod
      */
     public static function create(string $businessConnectionId, array $data = null): GetBusinessConnectionNameMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->businessConnectionId = $businessConnectionId;
         if ($data) {
             $instance->fill($data);
@@ -42,4 +42,4 @@ class GetBusinessConnectionNameMethod
 
         return $instance;
     }
-} 
+}

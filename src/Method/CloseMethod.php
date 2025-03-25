@@ -19,6 +19,6 @@ class CloseMethod implements MethodInterface
 {
     public static function create(): CloseMethod
     {
-        return new static();
+        return new self();
     }
 }

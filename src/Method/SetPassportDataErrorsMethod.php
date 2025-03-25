@@ -49,7 +49,7 @@ class SetPassportDataErrorsMethod implements SetMethodAliasInterface
      */
     public static function create(int $userId, array $errors): SetPassportDataErrorsMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->errors = $errors;
 

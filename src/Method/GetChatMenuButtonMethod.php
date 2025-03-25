@@ -20,7 +20,8 @@ class GetChatMenuButtonMethod implements MethodInterface
     use FillFromArrayTrait;
 
     /**
-     * Optional. Unique identifier for the target private chat. If not specified, default bot's menu button will be returned.
+     * Optional. Unique identifier for the target private chat.
+     * If not specified, default bot's menu button will be returned.
      *
      * @var int|null
      */
@@ -37,7 +38,7 @@ class GetChatMenuButtonMethod implements MethodInterface
      */
     public static function create(array $data = null): GetChatMenuButtonMethod
     {
-        $instance = new static();
+        $instance = new self();
         if ($data) {
             $instance->fill($data);
         }

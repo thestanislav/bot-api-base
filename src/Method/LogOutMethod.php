@@ -19,6 +19,6 @@ class LogOutMethod implements MethodInterface
 {
     public static function create(): LogOutMethod
     {
-        return new static();
+        return new self();
     }
 }

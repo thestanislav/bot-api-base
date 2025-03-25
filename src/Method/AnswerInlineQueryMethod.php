@@ -93,7 +93,7 @@ class AnswerInlineQueryMethod implements AnswerMethodAliasInterface
      */
     public static function create(string $inlineQueryId, array $results, array $data = null): AnswerInlineQueryMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->inlineQueryId = $inlineQueryId;
         $instance->results = $results;
         if ($data) {

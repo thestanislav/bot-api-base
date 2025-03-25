@@ -54,7 +54,7 @@ class AnswerShippingQueryMethod implements AnswerMethodAliasInterface
      */
     public static function createSuccess(string $shippingQueryId, array $shippingOptions): AnswerShippingQueryMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->shippingQueryId = $shippingQueryId;
         $instance->ok = true;
         $instance->shippingOptions = $shippingOptions;
@@ -70,7 +70,7 @@ class AnswerShippingQueryMethod implements AnswerMethodAliasInterface
      */
     public static function createFail(string $shippingQueryId, string $errorMessage): AnswerShippingQueryMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->shippingQueryId = $shippingQueryId;
         $instance->ok = false;
         $instance->errorMessage = $errorMessage;

@@ -18,6 +18,6 @@ class GetMyCommandsMethod implements MethodInterface
 {
     public static function create(): GetMyCommandsMethod
     {
-        return new static();
+        return new self();
     }
 }

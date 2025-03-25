@@ -120,7 +120,7 @@ class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface, Has
      */
     public static function create(string $chatId, string $question, array $options, array $data = null): self
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->question = $question;
         $instance->options = $options;

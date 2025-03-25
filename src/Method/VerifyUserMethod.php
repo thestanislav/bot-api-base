@@ -47,7 +47,7 @@ class VerifyUserMethod implements MethodInterface
      */
     public static function create(int $userId, array $data = null): VerifyUserMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         if ($data) {
             $instance->fill($data);
@@ -55,4 +55,4 @@ class VerifyUserMethod implements MethodInterface
 
         return $instance;
     }
-} 
+}

@@ -80,7 +80,7 @@ class SendVenueMethod implements SendMethodAliasInterface
         string $address,
         array $data = null
     ): SendVenueMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->latitude = $latitude;
         $instance->longitude = $longitude;

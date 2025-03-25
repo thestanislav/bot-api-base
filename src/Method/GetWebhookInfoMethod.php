@@ -15,6 +15,6 @@ class GetWebhookInfoMethod implements MethodInterface
 {
     public static function create(): GetWebhookInfoMethod
     {
-        return new static();
+        return new self();
     }
 }

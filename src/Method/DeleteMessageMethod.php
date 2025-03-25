@@ -34,7 +34,7 @@ class DeleteMessageMethod implements DeleteMethodAliasInterface
      */
     public static function create($chatId, int $messageId): DeleteMessageMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
 

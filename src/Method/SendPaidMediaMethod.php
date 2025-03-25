@@ -50,7 +50,7 @@ class SendPaidMediaMethod implements SendMethodAliasInterface
      */
     public static function create($chatId, InputPaidMediaType $media, array $data = null): SendPaidMediaMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->media = $media;
         if ($data) {
@@ -59,4 +59,4 @@ class SendPaidMediaMethod implements SendMethodAliasInterface
 
         return $instance;
     }
-} 
+}

@@ -68,7 +68,7 @@ class GetUpdatesMethod implements HasUpdateTypeVariableInterface, MethodInterfac
      */
     public static function create(array $data = null): GetUpdatesMethod
     {
-        $instance = new static();
+        $instance = new self();
         if ($data) {
             $instance->fill($data);
         }

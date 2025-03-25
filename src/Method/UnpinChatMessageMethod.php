@@ -33,7 +33,7 @@ class UnpinChatMessageMethod implements UnpinMethodAliasInterface
      */
     public static function create($chatId, array $data = null): UnpinChatMessageMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         if (!empty($data)) {

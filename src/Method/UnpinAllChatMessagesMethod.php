@@ -25,7 +25,7 @@ class UnpinAllChatMessagesMethod implements UnpinMethodAliasInterface
      */
     public static function create($chatId): UnpinAllChatMessagesMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         return $instance;

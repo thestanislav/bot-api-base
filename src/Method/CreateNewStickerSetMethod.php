@@ -148,7 +148,7 @@ class CreateNewStickerSetMethod implements CreateMethodAliasInterface
         string $emojis,
         array $data = null
     ): CreateNewStickerSetMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->name = $name;
         $instance->title = $title;

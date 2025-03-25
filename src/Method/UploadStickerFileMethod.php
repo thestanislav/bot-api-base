@@ -40,7 +40,7 @@ class UploadStickerFileMethod implements UploadMethodAliasInterface
      */
     public static function create(int $userId, InputFileType $pngSticker): UploadStickerFileMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->pngSticker = $pngSticker;
 

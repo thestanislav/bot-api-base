@@ -21,12 +21,11 @@ class PinChatMessageMethod implements PinMethodAliasInterface
     use MessageIdVariableTrait;
 
     /**
-     * Optional. Pass True, if it is not necessary to send a notification to all chat members about the new
-     * pinned message. Notifications are always disabled in channels.
+     * Optional. Sends the message silently. Users will receive a notification with no sound.
      *
      * @var bool|null
      */
-    public $disableNotification;
+    public ?bool $disableNotification = null;
 
     /**
      * @param int|string $chatId
@@ -39,7 +38,7 @@ class PinChatMessageMethod implements PinMethodAliasInterface
      */
     public static function create($chatId, int $messageId, array $data = null): PinChatMessageMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
         if ($data) {

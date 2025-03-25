@@ -121,7 +121,7 @@ class AddStickerToSetMethod implements AddMethodAliasInterface
         string $emojis,
         array $data = null
     ): AddStickerToSetMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->name = $name;
         $instance->emojis = $emojis;

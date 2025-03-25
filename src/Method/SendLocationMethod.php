@@ -70,7 +70,7 @@ class SendLocationMethod implements SendMethodAliasInterface
      */
     public static function create($chatId, float $latitude, float $longitude, array $data = null): SendLocationMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->latitude = $latitude;
         $instance->longitude = $longitude;

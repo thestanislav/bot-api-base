@@ -42,7 +42,7 @@ class EditMessageMediaMethod implements EditMethodAliasInterface
         InputMediaType $media,
         array $data = null
     ): EditMessageMediaMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->media = $media;
         $instance->messageId = $messageId;
@@ -67,7 +67,7 @@ class EditMessageMediaMethod implements EditMethodAliasInterface
         InputMediaType $media,
         array $data = null
     ): EditMessageMediaMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->inlineMessageId = $inlineMessageId;
         $instance->media = $media;
         if ($data) {

@@ -35,7 +35,7 @@ class SetChatDescriptionMethod implements SetMethodAliasInterface
      */
     public static function create($chatId, array $data = null): SetChatDescriptionMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         if ($data) {
             $instance->fill($data, ['chatId']);

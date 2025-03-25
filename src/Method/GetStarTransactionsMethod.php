@@ -39,11 +39,11 @@ class GetStarTransactionsMethod implements MethodInterface
      */
     public static function create(array $data = null): GetStarTransactionsMethod
     {
-        $instance = new static();
+        $instance = new self();
         if ($data) {
             $instance->fill($data);
         }
 
         return $instance;
     }
-} 
+}

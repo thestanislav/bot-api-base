@@ -31,7 +31,7 @@ class SetChatStickerSetMethod implements SetMethodAliasInterface
      */
     public static function create($chatId, string $stickerSetName): SetChatStickerSetMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->stickerSetName = $stickerSetName;
 

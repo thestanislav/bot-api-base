@@ -44,7 +44,7 @@ class GetUserProfilePhotosMethod implements MethodInterface
      */
     public static function create(int $userId, array $data = null): GetUserProfilePhotosMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         if ($data) {
             $instance->fill($data);

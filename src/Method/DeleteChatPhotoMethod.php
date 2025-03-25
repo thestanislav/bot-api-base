@@ -23,7 +23,7 @@ class DeleteChatPhotoMethod implements DeleteMethodAliasInterface
      */
     public static function create($chatId): DeleteChatPhotoMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         return $instance;

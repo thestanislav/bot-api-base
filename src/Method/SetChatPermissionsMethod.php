@@ -34,7 +34,7 @@ class SetChatPermissionsMethod implements SetMethodAliasInterface
      */
     public static function create($chatId, ChatPermissionsType $permissions): SetChatPermissionsMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->permissions = $permissions;
 

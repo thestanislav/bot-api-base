@@ -29,7 +29,7 @@ class StopMessageLiveLocationMethod implements StopMethodAliasInterface
      */
     public static function create($chatId, int $messageId, array $data = null): StopMessageLiveLocationMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
         if ($data) {
@@ -49,7 +49,7 @@ class StopMessageLiveLocationMethod implements StopMethodAliasInterface
      */
     public static function createInline(string $inlineMessageId, array $data = null): StopMessageLiveLocationMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->inlineMessageId = $inlineMessageId;
         if ($data) {
             $instance->fill($data, ['messageId', 'chatId', 'inlineMessageId']);

@@ -43,7 +43,7 @@ class SendGiftMethod implements SendMethodAliasInterface
      */
     public static function create($chatId, string $giftId, array $data = null): SendGiftMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->giftId = $giftId;
         if ($data) {
@@ -52,4 +52,4 @@ class SendGiftMethod implements SendMethodAliasInterface
 
         return $instance;
     }
-} 
+}

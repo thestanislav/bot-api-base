@@ -32,7 +32,8 @@ class EditUserStarSubscriptionMethod
     public ?string $businessConnectionId = null;
 
     /**
-     * Optional. Pass True to extend the subscription expiration date by the subscription period specified in the invoice link.
+     * Optional. Pass True to extend the subscription expiration date by the subscription period
+     * specified in the invoice link.
      *
      * @var bool|null
      */
@@ -55,7 +56,7 @@ class EditUserStarSubscriptionMethod
      */
     public static function create(int $userId, array $data = null): EditUserStarSubscriptionMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         if ($data) {
             $instance->fill($data);
@@ -63,4 +64,4 @@ class EditUserStarSubscriptionMethod
 
         return $instance;
     }
-} 
+}

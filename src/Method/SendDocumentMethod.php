@@ -57,7 +57,7 @@ class SendDocumentMethod implements HasParseModeVariableInterface, SendMethodAli
      */
     public static function create($chatId, $document, array $data = null): SendDocumentMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->document = $document;
         if ($data) {

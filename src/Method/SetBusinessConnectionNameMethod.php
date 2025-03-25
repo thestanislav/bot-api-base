@@ -40,9 +40,12 @@ class SetBusinessConnectionNameMethod
      *
      * @return SetBusinessConnectionNameMethod
      */
-    public static function create(string $businessConnectionId, string $name, array $data = null): SetBusinessConnectionNameMethod
-    {
-        $instance = new static();
+    public static function create(
+        string $businessConnectionId,
+        string $name,
+        array $data = null
+    ): SetBusinessConnectionNameMethod {
+        $instance = new self();
         $instance->businessConnectionId = $businessConnectionId;
         $instance->name = $name;
         if ($data) {
@@ -51,4 +54,4 @@ class SetBusinessConnectionNameMethod
 
         return $instance;
     }
-} 
+}

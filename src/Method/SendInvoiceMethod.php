@@ -183,7 +183,7 @@ class SendInvoiceMethod implements SendMethodAliasInterface
         array $prices,
         array $data = null
     ): SendInvoiceMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->title = $title;
         $instance->description = $description;

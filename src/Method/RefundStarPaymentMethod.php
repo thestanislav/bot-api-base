@@ -41,7 +41,7 @@ class RefundStarPaymentMethod
      */
     public static function create(string $telegramPaymentId, array $data = null): RefundStarPaymentMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->telegramPaymentId = $telegramPaymentId;
         if ($data) {
             $instance->fill($data);
@@ -49,4 +49,4 @@ class RefundStarPaymentMethod
 
         return $instance;
     }
-} 
+}

@@ -40,7 +40,7 @@ class SendStickerMethod implements SendMethodAliasInterface
      */
     public static function create($chatId, $sticker, array $data = null): SendStickerMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->sticker = $sticker;
         if ($data) {

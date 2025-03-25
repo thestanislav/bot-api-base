@@ -23,7 +23,7 @@ class DeleteChatStickerSetMethod implements DeleteMethodAliasInterface
      */
     public static function create($chatId): DeleteChatStickerSetMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         return $instance;

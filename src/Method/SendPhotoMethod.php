@@ -48,7 +48,7 @@ class SendPhotoMethod implements HasParseModeVariableInterface, SendMethodAliasI
      */
     public static function create($chatId, $photo, array $data = null): SendPhotoMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->photo = $photo;
         if ($data) {

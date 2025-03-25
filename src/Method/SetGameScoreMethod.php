@@ -84,7 +84,7 @@ class SetGameScoreMethod implements SetMethodAliasInterface
         int $messageId,
         array $data = null
     ): SetGameScoreMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->score = $score;
         $instance->chatId = $chatId;
@@ -112,7 +112,7 @@ class SetGameScoreMethod implements SetMethodAliasInterface
         string $inlineMessageId,
         array $data = null
     ): SetGameScoreMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->score = $score;
         $instance->inlineMessageId = $inlineMessageId;

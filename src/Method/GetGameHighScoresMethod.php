@@ -58,7 +58,7 @@ class GetGameHighScoresMethod implements MethodInterface
      */
     public static function create(int $userId, int $chatId, int $messageId): GetGameHighScoresMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
@@ -74,7 +74,7 @@ class GetGameHighScoresMethod implements MethodInterface
      */
     public static function createInline(int $userId, string $inlineMessageId): GetGameHighScoresMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->userId = $userId;
         $instance->inlineMessageId = $inlineMessageId;
 

@@ -36,7 +36,7 @@ trait SendToChatVariablesTrait
      *
      * @var bool|null
      */
-    public $disableNotification;
+    public ?bool $disableNotification = null;
 
     /**
      * Optional. Pass True, if the message should be sent even if the specified replied-to message is not found.

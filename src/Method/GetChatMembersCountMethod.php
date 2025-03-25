@@ -23,7 +23,7 @@ class GetChatMembersCountMethod implements MethodInterface
      */
     public static function create($chatId): GetChatMembersCountMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
 
         return $instance;

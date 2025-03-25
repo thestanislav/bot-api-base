@@ -89,7 +89,7 @@ class RestrictChatMemberMethod implements RestrictMethodAliasInterface
      */
     public static function createOld($chatId, int $userId, array $data = null): RestrictChatMemberMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->userId = $userId;
         if ($data) {
@@ -115,7 +115,7 @@ class RestrictChatMemberMethod implements RestrictMethodAliasInterface
         ChatPermissionsType $chatPermissionsType,
         array $data = null
     ): RestrictChatMemberMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->userId = $userId;
         $instance->permissions = $chatPermissionsType;

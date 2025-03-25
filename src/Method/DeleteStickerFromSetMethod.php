@@ -27,7 +27,7 @@ class DeleteStickerFromSetMethod implements DeleteMethodAliasInterface
      */
     public static function create(string $sticker): DeleteStickerFromSetMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->sticker = $sticker;
 
         return $instance;

@@ -47,7 +47,7 @@ class VerifyChatMethod implements MethodInterface
      */
     public static function create($chatId, array $data = null): VerifyChatMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         if ($data) {
             $instance->fill($data);
@@ -55,4 +55,4 @@ class VerifyChatMethod implements MethodInterface
 
         return $instance;
     }
-} 
+}

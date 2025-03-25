@@ -49,7 +49,7 @@ class SendVoiceMethod implements HasParseModeVariableInterface, SendMethodAliasI
      */
     public static function create($chatId, $voice, array $data = null): SendVoiceMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->voice = $voice;
         if ($data) {

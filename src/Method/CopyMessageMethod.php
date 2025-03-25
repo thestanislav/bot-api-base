@@ -17,7 +17,7 @@ use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
  *
  * @see https://core.telegram.org/bots/api#copymessage
  */
-class CopyMessageMethod implements HasParseModeVariableInterface, MethodInterface
+class CopyMessageMethod implements HasParseModeVariableInterface, MethodInterface, SendMethodAliasInterface
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
@@ -44,7 +44,7 @@ class CopyMessageMethod implements HasParseModeVariableInterface, MethodInterfac
      */
     public static function create($chatId, $fromChatId, int $messageId, array $data = null): CopyMessageMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->fromChatId = $fromChatId;
         $instance->messageId = $messageId;

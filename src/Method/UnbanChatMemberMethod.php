@@ -34,7 +34,7 @@ class UnbanChatMemberMethod implements UnbanMethodAliasInterface
      */
     public static function create($chatId, int $userId, array $data = null): UnbanChatMemberMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->userId = $userId;
 

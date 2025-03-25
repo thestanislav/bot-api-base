@@ -74,12 +74,16 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
 
     /**
      * @param int|string $chatId
+     * @param string     $text
+     * @param array|null $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendMessageMethod
      */
     public static function create($chatId, string $text, array $data = null): SendMessageMethod
     {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->text = $text;
         if ($data) {

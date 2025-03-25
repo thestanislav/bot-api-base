@@ -62,7 +62,7 @@ class SendContactMethod implements SendMethodAliasInterface
         string $firstName,
         array $data = null
     ): SendContactMethod {
-        $instance = new static();
+        $instance = new self();
         $instance->chatId = $chatId;
         $instance->phoneNumber = $phoneNumber;
         $instance->firstName = $firstName;
