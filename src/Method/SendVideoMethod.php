@@ -83,7 +83,7 @@ class SendVideoMethod implements HasParseModeVariableInterface, SendMethodAliasI
      *
      * @var bool|null
      */
-    public $supportStreaming;
+    public $supportsStreaming;
 
     /**
      * Optional. Pass True if the video needs to be covered with a spoiler animation.
