@@ -35,7 +35,7 @@ class SendVideoMethodTest extends MethodTestCase
                 'duration' => 100,
                 'width' => 100,
                 'height' => 100,
-                'thumb' => '',
+                'thumbnail' => '',
                 'support_streaming' => true,
                 'caption' => 'caption',
                 'caption_entities' => [['type' => 'pre', 'offset' => 0, 'length' => 1]],
@@ -45,7 +45,7 @@ class SendVideoMethodTest extends MethodTestCase
                 'allow_sending_without_reply' => true,
                 'reply_markup' => static::buildInlineMarkupArray(),
             ],
-            ['video' => true, 'thumb' => true],
+            ['video' => true, 'thumbnail' => true],
             ['reply_markup']
         );
     }
@@ -62,7 +62,7 @@ class SendVideoMethodTest extends MethodTestCase
                 'duration' => 100,
                 'width' => 100,
                 'height' => 100,
-                'thumb' => InputFileType::create('/dev/null'),
+                'thumbnail' => InputFileType::create('/dev/null'),
                 'caption' => 'caption',
                 'captionEntities' => [MessageEntityType::create(MessageEntityType::TYPE_PRE, 0, 1)],
                 'supportStreaming' => true,

@@ -76,7 +76,7 @@ class SendVideoMethod implements HasParseModeVariableInterface, SendMethodAliasI
      *
      * @var InputFileType|string|null
      */
-    public $thumb;
+    public $thumbnail;
 
     /**
      * Optional. Pass True, if the uploaded video is suitable for streaming.
